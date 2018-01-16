@@ -1,0 +1,27 @@
+<?php
+define('__DB_HOST', '203.115.101.30');
+define('__DB_PORT', '3306');
+define('__DB_USER', 'visiontek11000');
+define('__DB_PASSWORD', '123456');
+define('__DB_DATABASE', 'inventory');
+
+ $con2 = @mysql_connect(__DB_HOST,__DB_USER,__DB_PASSWORD);
+$db2 = @mysql_select_db("inventory",$con2);
+ header('Content-Type: application/xml');
+if(!empty($_GET['ItgcID'])){
+	
+	$openCaseQuery=mysql_query(" select itgc_id,device_id,device_sno,device_imei,recd_date,dt.item_name,ds.status  
+  ,dispatch_branch,sim.phone_no,sim.sim_no from device dev    
+  LEFT join client clt on dev.client_id = clt.client_id    
+  LEFT join sim sim on dev.sim_id = sim.sim_id    
+  LEFT join device_status ds on dev.device_status=ds.status_sno    
+  LEFT join item_master dt on dev.device_type=dt.item_id where   dev.sim_id<>0 
+  and dev.itgc_id='".$_GET['ItgcID']."'");
+    $rowOpenCase =mysql_fetch_assoc($openCaseQuery);
+	 echo  "<data>
+  <phone_no>".$rowOpenCase['phone_no']."</phone_no>
+  <device_imei>".$rowOpenCase['device_imei']."</device_imei>
+  <code>1</code>
+</data>";
+}		
+?>

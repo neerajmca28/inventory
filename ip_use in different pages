@@ -1,0 +1,636 @@
+Searching 5811 files for "localhost" (regex)
+
+/opt/lampp/htdocs/inventory/assets/plugins/bootstrap-editable/readme.md:
+   72  ````  
+   73  3.That's it! You can start editing files in **lib/src** directory or create new editable input/container/whatever.  
+   74: To test the result go to **playground**, start server <code>node server.js</code> and open in your browser [http://localhost:3000/playground](http://localhost:3000/playground).
+   75  
+   76  4.To run unit tests you can open it directly in browser **lib/test/index.html**.   
+
+/opt/lampp/htdocs/inventory/assets/plugins/jquery-pjax/readme.md:
+  310  == Sinatra/1.3.2 has taken the stage on 4567 for development with backup from WEBrick
+  311  
+  312: $ open http://localhost:4567/
+  313  ```
+  314  
+
+/opt/lampp/htdocs/inventory/assets/plugins/jquery-validation/contributing.md:
+   10  ## Unit Tests
+   11  
+   12: To run unit tests, you should have a local webserver installed and pointing at your workspace. Then open `http://localhost/jquery-validation/test` to run the unit tests. Start with one browser while developing the fix, then run against others before committing. Usually latest Chrome, Firefox, Safari and Opera and a few IEs.
+   13  
+   14  ## Linting
+
+/opt/lampp/htdocs/inventory/config.php:
+    9  ini_set('include_path', '/opt/lampp/htdocs/inventory/private/lib/');
+   10  $_SESSION['TimeZoneDiff']=330;
+   11: define('__DB_HOST', 'localhost');
+   12  define('__DB_PORT', '3306');
+   13  define('__DB_USER', 'root');
+   ..
+   16   $con2 = mysql_connect(__DB_HOST,__DB_USER,__DB_PASSWORD);
+   17  $db2 = mysql_select_db("inventory",$con2);
+   18:  define('__DB_HOST_STAGING', 'localhost');
+   19  define('__DB_PORT_STAGING', '3306');
+   20  define('__DB_USER_STAGING', 'root');
+   ..
+   29     
+   30    global $dblink_inv;
+   31:   $hostname_inv = "localhost";
+   32    $username_inv = "root";
+   33    $password_inv = "";
+   ..
+   58     
+   59    global $dblink2;
+   60:   $hostname2 = "localhost";
+   61    $username2 = "root";
+   62    $password2 = "";
+   ..
+   88  }
+   89  
+   90: define('__DB_HOST_MATRIX', 'localhost');
+   91  define('__DB_PORT_MATRIX', '3306');
+   92  define('__DB_USER_MATRIX', 'root');
+   ..
+   94  define('__DB_DATABASE_MATRIX', 'matrix');
+   95  
+   96: //define('__SITE_URL', 'http://localhost/inventory');
+   97: define('__SITE_URL', 'http://localhost/inventory');
+   98  
+   99  
+
+/opt/lampp/htdocs/inventory/config.php.bak:
+   12  
+   13  
+   14: define('__DB_HOST', 'localhost');
+   15  define('__DB_PORT', '3306');
+   16  define('__DB_USER', 'visiontek11000');
+   ..
+   37  define('__DB_DATABASE_MATRIX', 'matrix'); 
+   38  
+   39: //define('__SITE_URL', 'http://localhost/inventory');
+   40  define('__SITE_URL', 'http://203.115.101.30/inventory');
+   41  
+
+/opt/lampp/htdocs/inventory/config_server.php:
+   37  define('__DB_DATABASE_MATRIX', 'matrix'); 
+   38  
+   39: //define('__SITE_URL', 'http://localhost/inventory');
+   40  define('__SITE_URL', 'http://203.115.101.30/inventory');
+   41  
+
+/opt/lampp/htdocs/inventory/connection.php:
+    4  date_default_timezone_set ("Asia/Calcutta");
+    5  
+    6: define('__SITE_URL', 'http://localhost/inventory');
+    7  
+    8  define('__DOCUMENT_ROOT', 'C:/xampp/htdocs/inventory');
+    9  
+   10  
+   11: $hostname2 = "localhost";
+   12  $username2 = "root";
+   13  $password2 = "";
+   ..
+   21  {
+   22  	global $dblink2;
+   23: 	$hostname2 = "localhost";
+   24  	$username2 = "root";
+   25  	$password2 = "";
+   ..
+   37  	global $dblink2;
+   38  
+   39: 	$hostname2 = "localhost";
+   40  	$username2 = "root";
+   41  	$password2 = "";
+   ..
+   71  	global $dblink2;
+   72  
+   73: 	$hostname2 = "localhost";
+   74  	$username2 = "root";
+   75  	$password2 = "";
+   ..
+  105  	global $dblink2;
+  106  
+  107: 	$hostname2 = "localhost";
+  108  	$username2 = "root";
+  109  	$password2 = "";
+  ...
+  130  	global $dblink2;
+  131  
+  132: 	$hostname2 = "localhost";
+  133  	$username2 = "root";
+  134  	$password2 = "";
+  ...
+  157  function getcountRow_live($query)
+  158  {
+  159: 	$hostname = "localhost";
+  160  	$username1 = "root";
+  161  	$password = "";
+  ...
+  172  function select_query_live($query,$condition=0)
+  173  {
+  174: 	$hostname = "localhost";
+  175  	$username1 = "root";
+  176  	$password = "";
+  ...
+  202  function update_query_live($table_name,$form_data,$condition)
+  203  {
+  204: 	$hostname = "localhost";
+  205  	$username1 = "root";
+  206  	$password = "";
+  ...
+  236  function select_query_live_con($query,$condition=0)
+  237  {
+  238: 	$hostname_live = "localhost";
+  239  	$username1_live = "root";
+  240  	$password_live = "";
+  ...
+  266  function insert_query_live_con($table_name, $form_data)
+  267  {
+  268: 	$hostname_live = "localhost";
+  269  	$username1_live = "root";
+  270  	$password_live = "";
+  ...
+  289  function update_query_live_con($table_name,$form_data,$condition)
+  290  {
+  291: 	$hostname_live = "localhost";
+  292  	$username1_live = "root";
+  293  	$password_live = "";
+
+/opt/lampp/htdocs/inventory/connection_server.php:
+    4  date_default_timezone_set ("Asia/Calcutta");
+    5  
+    6: define('__SITE_URL', 'http://localhost/inventory');
+    7  
+    8  define('__DOCUMENT_ROOT', 'C:/xampp/htdocs/inventory');
+    9  
+   10  
+   11: $hostname2 = "localhost";
+   12  $username2 = "root";
+   13  $password2 = "";
+   ..
+   21  {
+   22  	global $dblink2;
+   23: 	$hostname2 = "localhost";
+   24  	$username2 = "root";
+   25  	$password2 = "";
+   ..
+   37  	global $dblink2;
+   38  
+   39: 	$hostname2 = "localhost";
+   40  	$username2 = "root";
+   41  	$password2 = "";
+   ..
+   71  	global $dblink2;
+   72  
+   73: 	$hostname2 = "localhost";
+   74  	$username2 = "root";
+   75  	$password2 = "";
+   ..
+  105  	global $dblink2;
+  106  
+  107: 	$hostname2 = "localhost";
+  108  	$username2 = "root";
+  109  	$password2 = "";
+  ...
+  130  	global $dblink2;
+  131  
+  132: 	$hostname2 = "localhost";
+  133  	$username2 = "root";
+  134  	$password2 = "";
+  ...
+  157  function getcountRow_live($query)
+  158  {
+  159: 	$hostname = "localhost";
+  160  	$username1 = "root";
+  161  	$password = "";
+  ...
+  172  function select_query_live($query,$condition=0)
+  173  {
+  174: 	$hostname = "localhost";
+  175  	$username1 = "root";
+  176  	$password = "";
+  ...
+  202  function update_query_live($table_name,$form_data,$condition)
+  203  {
+  204: 	$hostname = "localhost";
+  205  	$username1 = "root";
+  206  	$password = "";
+  ...
+  236  function select_query_live_con($query,$condition=0)
+  237  {
+  238: 	$hostname_live = "localhost";
+  239  	$username1_live = "root";
+  240  	$password_live = "";
+  ...
+  266  function insert_query_live_con($table_name, $form_data)
+  267  {
+  268: 	$hostname_live = "localhost";
+  269  	$username1_live = "root";
+  270  	$password_live = "";
+  ...
+  289  function update_query_live_con($table_name,$form_data,$condition)
+  290  {
+  291: 	$hostname_live = "localhost";
+  292  	$username1_live = "root";
+  293  	$password_live = "";
+
+/opt/lampp/htdocs/inventory/excel_mail_send.php:
+    1  <?php
+    2: $servername = "localhost";
+    3  $username = "root";
+    4  $password = "";
+
+/opt/lampp/htdocs/inventory/inventoryAPI/private/config.php:
+   16  $databasename = "internalsoftware";*/
+   17  
+   18: $hostname = "localhost";
+   19  $username1 = "root";
+   20  $password = "";
+   ..
+   59  
+   60   
+   61: //define('__SITE_URL', 'http://localhost/InstallerAPI');
+   62  //define('__SITE_URL', 'http://203.115.101.30/InstallerAPI');
+   63  define('__SITE_URL', 'http://192.168.1.28/InstallerAPI');
+
+/opt/lampp/htdocs/inventory/inventoryAPI/private/lib/Zend/Db/Adapter/Abstract.php:
+  149       * username       => (string) Connect to the database as this username.
+  150       * password       => (string) Password associated with the username.
+  151:      * host           => (string) What host to connect to, defaults to localhost
+  152       *
+  153       * Some options are used on a case-by-case basis by adapters:
+
+/opt/lampp/htdocs/inventory/inventoryAPI/private/lib/Zend/Db/Adapter/Db2.php:
+   67          'username'     => null,
+   68          'password'     => null,
+   69:         'host'         => 'localhost',
+   70          'port'         => '50000',
+   71          'protocol'     => 'TCPIP',
+   ..
+  155          }
+  156  
+  157:         if ($this->_config['host'] !== 'localhost' && !$this->_isI5) {
+  158:             // if the host isn't localhost, use extended connection params
+  159              $dbname = 'DRIVER={IBM DB2 ODBC DRIVER}' .
+  160                       ';DATABASE=' . $this->_config['dbname'] .
+  ...
+  171              );
+  172          } else {
+  173:             // host is localhost, so use standard connection params
+  174              $this->_connection = $conn_func_name(
+  175                  $this->_config['dbname'],
+
+/opt/lampp/htdocs/inventory/inventoryAPI/private/lib/Zend/Mail/Storage/Imap.php:
+  225       * Supported paramters are
+  226       *   - user username
+  227:      *   - host hostname or ip address of IMAP server [optional, default = 'localhost']
+  228       *   - password password for user 'username' [optional, default = '']
+  229       *   - port port for IMAP server [optional, default = 110]
+  ...
+  265          }
+  266  
+  267:         $host     = isset($params->host)     ? $params->host     : 'localhost';
+  268          $password = isset($params->password) ? $params->password : '';
+  269          $port     = isset($params->port)     ? $params->port     : null;
+
+/opt/lampp/htdocs/inventory/inventoryAPI/private/lib/Zend/Mail/Storage/Pop3.php:
+  182          }
+  183  
+  184:         $host     = isset($params->host)     ? $params->host     : 'localhost';
+  185          $password = isset($params->password) ? $params->password : '';
+  186          $port     = isset($params->port)     ? $params->port     : null;
+
+/opt/lampp/htdocs/inventory/inventoryAPI/private/lib/Zend/Mail/Transport/Smtp.php:
+   79       * @var string
+   80       */
+   81:     protected $_name = 'localhost';
+   82  
+   83  
+
+/opt/lampp/htdocs/inventory/inventoryAPI/private/lib/Zend/Validate/Hostname.php:
+   92  
+   93      /**
+   94:      * Allows local network names (e.g., localhost, www.localdomain)
+   95       */
+   96      const ALLOW_LOCAL = 4;
+
+/opt/lampp/htdocs/inventory/inventoryAPI/private/lib/library_common.php:
+  371  
+  372                      try {
+  373:              $conn = new PDO("mysql:host=localhost;dbname=inventory",
+  374                              "root", "");
+  375  
+
+/opt/lampp/htdocs/inventory/inventoryAPI/private/logs/zend.log.txt:
+ 6067  #3 C:\xampp\htdocs\InstallerAPI\image.php(91): master->insertDeviceImage('1163844_3795_2_...', '3795', '1163844', '8849', '2', 'MH04EL')
+ 6068  #4 {main}
+ 6069: 2016-12-08T11:01:49+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6070  Stack trace:
+ 6071  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6078  #7 {main}
+ 6079  
+ 6080: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6081  Stack trace:
+ 6082  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6087  #5 C:\xampp\htdocs\InstallerAPI\login.php(42): master->getUserData('rm', '123')
+ 6088  #6 {main}
+ 6089: 2016-12-08T11:01:49+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6090  Stack trace:
+ 6091  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6099  #8 {main}
+ 6100  
+ 6101: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6102  Stack trace:
+ 6103  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6109  #6 C:\xampp\htdocs\InstallerAPI\login.php(42): master->getUserData('rm', '123')
+ 6110  #7 {main}
+ 6111: 2016-12-08T11:03:52+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6112  Stack trace:
+ 6113  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6120  #7 {main}
+ 6121  
+ 6122: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6123  Stack trace:
+ 6124  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6129  #5 C:\xampp\htdocs\InstallerAPI\login.php(42): master->getUserData('rm', '123')
+ 6130  #6 {main}
+ 6131: 2016-12-08T11:03:52+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6132  Stack trace:
+ 6133  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6141  #8 {main}
+ 6142  
+ 6143: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6144  Stack trace:
+ 6145  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6151  #6 C:\xampp\htdocs\InstallerAPI\login.php(42): master->getUserData('rm', '123')
+ 6152  #7 {main}
+ 6153: 2016-12-08T11:03:54+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6154  Stack trace:
+ 6155  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6162  #7 {main}
+ 6163  
+ 6164: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6165  Stack trace:
+ 6166  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6171  #5 C:\xampp\htdocs\InstallerAPI\installertask.php(75): master->getLoginUserData('Rm', '123', '277', '2')
+ 6172  #6 {main}
+ 6173: 2016-12-08T11:03:54+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6174  Stack trace:
+ 6175  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6183  #8 {main}
+ 6184  
+ 6185: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6186  Stack trace:
+ 6187  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6193  #6 C:\xampp\htdocs\InstallerAPI\installertask.php(75): master->getLoginUserData('Rm', '123', '277', '2')
+ 6194  #7 {main}
+ 6195: 2016-12-08T11:03:54+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6196  Stack trace:
+ 6197  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6204  #7 {main}
+ 6205  
+ 6206: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6207  Stack trace:
+ 6208  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6213  #5 C:\xampp\htdocs\InstallerAPI\installertask.php(81): master->getServiceData('277', '2')
+ 6214  #6 {main}
+ 6215: 2016-12-08T11:03:54+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6216  Stack trace:
+ 6217  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6225  #8 {main}
+ 6226  
+ 6227: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6228  Stack trace:
+ 6229  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6235  #6 C:\xampp\htdocs\InstallerAPI\installertask.php(81): master->getServiceData('277', '2')
+ 6236  #7 {main}
+ 6237: 2016-12-08T11:03:54+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6238  Stack trace:
+ 6239  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6246  #7 {main}
+ 6247  
+ 6248: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6249  Stack trace:
+ 6250  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6255  #5 C:\xampp\htdocs\InstallerAPI\installertask.php(82): master->getInstallationData('277', '2')
+ 6256  #6 {main}
+ 6257: 2016-12-08T11:03:54+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6258  Stack trace:
+ 6259  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6267  #8 {main}
+ 6268  
+ 6269: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6270  Stack trace:
+ 6271  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6277  #6 C:\xampp\htdocs\InstallerAPI\installertask.php(82): master->getInstallationData('277', '2')
+ 6278  #7 {main}
+ 6279: 2016-12-08T11:04:21+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6280  Stack trace:
+ 6281  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6288  #7 {main}
+ 6289  
+ 6290: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6291  Stack trace:
+ 6292  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6297  #5 C:\xampp\htdocs\InstallerAPI\items.php(41): master->getUserData('rm', '123')
+ 6298  #6 {main}
+ 6299: 2016-12-08T11:04:21+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6300  Stack trace:
+ 6301  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6309  #8 {main}
+ 6310  
+ 6311: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6312  Stack trace:
+ 6313  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6319  #6 C:\xampp\htdocs\InstallerAPI\items.php(41): master->getUserData('rm', '123')
+ 6320  #7 {main}
+ 6321: 2016-12-08T11:04:21+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6322  Stack trace:
+ 6323  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6330  #7 {main}
+ 6331  
+ 6332: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6333  Stack trace:
+ 6334  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6339  #5 C:\xampp\htdocs\InstallerAPI\items.php(45): master->getItems('A')
+ 6340  #6 {main}
+ 6341: 2016-12-08T11:04:21+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6342  Stack trace:
+ 6343  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6351  #8 {main}
+ 6352  
+ 6353: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6354  Stack trace:
+ 6355  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6361  #6 C:\xampp\htdocs\InstallerAPI\items.php(45): master->getItems('A')
+ 6362  #7 {main}
+ 6363: 2016-12-08T11:04:25+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6364  Stack trace:
+ 6365  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6372  #7 {main}
+ 6373  
+ 6374: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6375  Stack trace:
+ 6376  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6381  #5 C:\xampp\htdocs\InstallerAPI\items.php(41): master->getUserData('rm', '123')
+ 6382  #6 {main}
+ 6383: 2016-12-08T11:04:25+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6384  Stack trace:
+ 6385  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6393  #8 {main}
+ 6394  
+ 6395: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6396  Stack trace:
+ 6397  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6403  #6 C:\xampp\htdocs\InstallerAPI\items.php(41): master->getUserData('rm', '123')
+ 6404  #7 {main}
+ 6405: 2016-12-08T11:04:25+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6406  Stack trace:
+ 6407  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6414  #7 {main}
+ 6415  
+ 6416: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6417  Stack trace:
+ 6418  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+ ....
+ 6423  #5 C:\xampp\htdocs\InstallerAPI\items.php(45): master->getItems('T')
+ 6424  #6 {main}
+ 6425: 2016-12-08T11:04:25+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:129
+ 6426  Stack trace:
+ 6427  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php(129): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+ ....
+ 6435  #8 {main}
+ 6436  
+ 6437: Next exception 'Zend_Db_Adapter_Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Abstract.php:144
+ 6438  Stack trace:
+ 6439  #0 C:\xampp\htdocs\InstallerAPI\private\lib\Zend\Db\Adapter\Pdo\Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+
+/opt/lampp/htdocs/inventory/js/function.js:
+    1  //var Path="http://trackingexperts.com/format/";
+    2: var Path="http://localhost/inventory_old/";
+    3  
+    4  function Show_record(RowId,tablename,DivId)
+
+/opt/lampp/htdocs/inventory/latest_telemetry.sql:
+    1  -- --------------------------------------------------------
+    2: -- Host:                         localhost
+    3  -- Server version:               5.5.10 - MySQL Community Server (GPL)
+    4  -- Server OS:                    Win64
+
+/opt/lampp/htdocs/inventory/login1.php:
+    1  <?php
+    2  session_start();
+    3: $cn=mysql_connect("localhost","root","");
+    4  if(!$cn)
+    5  {
+
+/opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php:
+  149       * username       => (string) Connect to the database as this username.
+  150       * password       => (string) Password associated with the username.
+  151:      * host           => (string) What host to connect to, defaults to localhost
+  152       *
+  153       * Some options are used on a case-by-case basis by adapters:
+
+/opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Db2.php:
+   67          'username'     => null,
+   68          'password'     => null,
+   69:         'host'         => 'localhost',
+   70          'port'         => '50000',
+   71          'protocol'     => 'TCPIP',
+   ..
+  155          }
+  156  
+  157:         if ($this->_config['host'] !== 'localhost' && !$this->_isI5) {
+  158:             // if the host isn't localhost, use extended connection params
+  159              $dbname = 'DRIVER={IBM DB2 ODBC DRIVER}' .
+  160                       ';DATABASE=' . $this->_config['dbname'] .
+  ...
+  171              );
+  172          } else {
+  173:             // host is localhost, so use standard connection params
+  174              $this->_connection = $conn_func_name(
+  175                  $this->_config['dbname'],
+
+/opt/lampp/htdocs/inventory/private/lib/Zend/Mail/Storage/Imap.php:
+  225       * Supported paramters are
+  226       *   - user username
+  227:      *   - host hostname or ip address of IMAP server [optional, default = 'localhost']
+  228       *   - password password for user 'username' [optional, default = '']
+  229       *   - port port for IMAP server [optional, default = 110]
+  ...
+  265          }
+  266  
+  267:         $host     = isset($params->host)     ? $params->host     : 'localhost';
+  268          $password = isset($params->password) ? $params->password : '';
+  269          $port     = isset($params->port)     ? $params->port     : null;
+
+/opt/lampp/htdocs/inventory/private/lib/Zend/Mail/Storage/Pop3.php:
+  182          }
+  183  
+  184:         $host     = isset($params->host)     ? $params->host     : 'localhost';
+  185          $password = isset($params->password) ? $params->password : '';
+  186          $port     = isset($params->port)     ? $params->port     : null;
+
+/opt/lampp/htdocs/inventory/private/lib/Zend/Mail/Transport/Smtp.php:
+   79       * @var string
+   80       */
+   81:     protected $_name = 'localhost';
+   82  
+   83  
+
+/opt/lampp/htdocs/inventory/private/lib/Zend/Validate/Hostname.php:
+   92  
+   93      /**
+   94:      * Allows local network names (e.g., localhost, www.localdomain)
+   95       */
+   96      const ALLOW_LOCAL = 4;
+
+/opt/lampp/htdocs/inventory/private/lib/library_common.php:
+  405  
+  406                      try {
+  407:             $conn = new PDO("mysql:host=localhost;dbname=inventory",
+  408                              "root", "");
+  409  
+
+/opt/lampp/htdocs/inventory/private/lib/library_common1.php:
+  370  
+  371                      try {
+  372:             $conn = new PDO("mysql:host=localhost;dbname=inventory",
+  373                              "root", "");
+  374  
+
+105 matches across 29 files

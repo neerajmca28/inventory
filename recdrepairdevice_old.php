@@ -1,0 +1,274 @@
+<?php
+include("config.php");
+include("include/header.php");
+include("device_status.php");
+include_once(__DOCUMENT_ROOT.'/private/master.php'); 
+if(!isset($_SESSION['branch_id']))
+{
+ ?><script><?php echo("location.href = '".__SITE_URL."/index.php';");?></script><?php
+}
+$masterObj = new master();
+$branch_id=$_SESSION['branch_id'];
+$SelectRepairOk=select_Procedure("CALL SelectRepairOk('".$branch_id."')");
+$SelectRepairOk=$SelectRepairOk[0];
+$rowcount=count($SelectRepairOk);
+//$installer_list=db__select_staging("select * from internalsoftware.installer where",array( 'branch_id'=>'".$branch_id."', 'is_delete'=>1));
+//print_r($installer_name); die; 
+if(isset($_POST['submit']))
+{
+		for($i=0;$i<$rowcount;$i++)
+		{
+			if(isset($_POST['rowVal'][$i]))
+			{
+				$data=explode('##',$_POST['rowVal'][$i]);
+				 $DeviceId=$data[0];
+				 $imei=$data[1];
+				 $st1=$data[2];
+				 if($st1==105)
+				 {
+				 	$deviceStatus=$RecdRepairDeviceStock; 
+				 }
+				 if($st1==194)
+				 {
+				 	$deviceStatus=$FinalAttachSim; 
+				 }
+				 
+				$UpdateDispathRepairDevice1=select_Procedure("CALL UpdateDispathRepairDevice1('".$DeviceId."','".$deviceStatus."','".$imei."')");
+			}
+		}
+			?><script><?php echo("location.href = '".__SITE_URL."/recdrepairdevice.php';");?></script><?php	
+}
+?>
+<head>
+</head>
+<body>
+ <form name="dispatchdevice" id="dispatchdevice" method="post" action="" >
+ 	<div class="color-sign" style="margin: 15px 0 2px 0;">
+	 <div class="cl-item"><span class="lightblue"></span><span>Aqua :</span><span>Reparied Device</span></div>
+	  <div class="cl-item"><span class="white"></span><span>New Device</span></div>
+	   </div>	
+				
+<article>
+
+  <div class="col-12"> 
+ 
+					
+    <!-- BEGIN BORDERED TABLE PORTLET-->
+    <div class="portlet box yellow">
+      <div class="portlet-title">
+        <div class="caption"> <i class="fa fa"></i>Recd Repair Device </div>
+      </div>
+      <div class="portlet-body">
+        <table class="table table-bordered table" id="filtertable">
+         
+          <thead>
+            <tr>
+              <th><input type="checkbox" name="checkAll[]" id="checkAll" onClick="checkAllId();" class="checkAll"></th>
+              <th> Serial No. </th>
+			  <th> DeviceID </th>
+              <th> ITGC ID </th>
+              <th> IMEI </th>
+              <th> Vehilce No </th>
+              <th> Client Name </th>
+			  <th> Repair Date </th>
+			  <th> Status </th>
+              <th> Is BranchReceived </th>
+              <th> Send Branch Name</th>
+			  <th> Device Removed Problem</th>
+              <th> RemoveInstallerName</th>
+              <th> PendingDays</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+
+			for($x=0;$x<$rowcount;$x++)
+			{
+				$y=$x+1;
+				// $Branch_Recevied= $SelectRepairOk[$x]['Is_Branch_Recevied'];
+				// if($Branch_Recevied>0)
+				// {
+				// 	 $is_branch_rec=1;
+				// }
+				// else
+				// {
+				// 	 $is_branch_rec=0;
+				// }
+				// if($is_branch_rec>0)
+				// {
+				// 	$color="#00FFFF";
+				// 	$tool_tip="Send By another Branch";
+				// }
+				$device_status= $SelectRepairOk[$x]['device_status'];
+				if($device_status==105)
+				{
+				 	 	$color="#7acde9";
+						$tool_tip="repaired device";
+				 }
+				 if($device_status==194)
+				 {
+				 	 	$color="#FFFFFF";
+						$tool_tip="New Device";
+				 }
+            ?>
+            <tr bgcolor="<?php echo $color; ?>" title="<?php echo $tool_tip; ?>">
+              <td><input type="checkbox" id="check<?php echo $y; ?>" name="rowVal[]" value="<?php echo $SelectRepairOk[$x]['device_id'];?>##<?php echo $SelectRepairOk[$x]['device_imei'];?>##<?php echo $SelectRepairOk[$x]['device_status'];?>" onClick="setRow('<?php echo $y; ?>');" class="checkbox1"></td>
+			  <td><?php echo $y;?></td>
+			   <td><?php echo $SelectRepairOk[$x]['device_id'];?></td>
+			   
+			   <td><?php echo $SelectRepairOk[$x]['itgc_id']; ?></td>
+			   <td><?php echo $SelectRepairOk[$x]['device_imei']; ?></td>
+			   <td><?php echo $SelectRepairOk[$x]['veh_no']; ?></td>
+			   <td><?php echo $SelectRepairOk[$x]['client_name']; ?></td>
+				<td><?php echo $SelectRepairOk[$x]['device_removed_date']; ?></td>
+				<?php if($SelectRepairOk[$x]['device_status']==105)
+				{
+				 	 	$dev_status="Repaired Device";
+				}
+				if($SelectRepairOk[$x]['device_status']==194)
+				 {
+				 	 	$dev_status="New Device";
+				 }
+				 ?>
+
+				<td><?php echo $dev_status; ?></td>
+				<td><?php 
+					echo $is_branch_rec;
+				?>
+				</td>
+				
+			  <?php 
+				  $receive_from=$SelectRepairOk[$x]['Is_Branch_Recevied'];
+			  if($receive_from==0)
+			  {
+				  $receive_from='';
+			  }
+			  if($receive_from==1)
+			  {
+				  $receive_from='Delhi';
+			  }
+			   if($receive_from==2)
+			  {
+				  $receive_from='Mumbai';
+			  }
+			   if($receive_from==3)
+			  {
+				  $receive_from='Jaipur';
+			  }
+			   if($receive_from==4)
+			  {
+				  $receive_from='Sonepat';
+			  }
+			   if($receive_from==5)
+			  {
+				  $receive_from='Kanpur';
+			  }
+			    if($receive_from==6)
+			  {
+				  $receive_from='Ahmedabad';
+			  }
+			    if($receive_from==7)
+			  {
+				  $receive_from='kolkata';
+			  }
+			  ?>
+			  <td><?php echo $receive_from;?></td>
+			  <td><?php echo $SelectRepairOk[$x]['device_removed_problem'];?></td>
+			  <td><?php echo $SelectRepairOk[$x]['Remove_installer_name'];?></td>
+			  <td><?php echo $SelectRepairOk[$x]['PendingDays'];?></td>
+            </tr>
+            <?php } ?>
+            
+             <input type="submit" onClick="bulk()" name="submit" class="btn btn-default table-btn-submit" id="submit" value="Received">
+          </tbody>
+          </form> 
+        </table>
+      </div>
+    </div>
+    <!-- END BORDERED TABLE PORTLET--> 
+  </div>
+</article>
+<script>
+ var $dispatch = jQuery.noConflict()
+  $dispatch('.checkbox1').on('change', function() {
+    var bool = $dispatch('.checkbox1:checked').length === $dispatch('.checkbox1').length;
+    $dispatch('#checkAll').prop('checked', bool);
+  });
+
+  $dispatch('#checkAll').on('change', function() {
+    $dispatch('.checkbox1').prop('checked', this.checked);
+  });
+</script>
+<script type="text/javascript">
+  function checkAllId(){
+    var i;
+    var row = document.getElementById("checkAll")
+    for(i=1;i<=<?php echo $rowcount; ?>;i++){
+      if(row.checked){
+		// alert(<?php echo $rowcount; ?>);
+		 // var tt=document.getElementById("remark"+i);
+		    //alert('tt');
+        document.getElementById("remark"+i).disabled = false;
+        document.getElementById("antenna"+i).disabled = false;
+        document.getElementById("immob"+i).disabled = false;
+		document.getElementById("receive_from"+i).disabled = false;
+		document.getElementById("connectors"+i).disabled = false;
+        }
+      else
+      {
+        document.getElementById("remark"+i).disabled = true;
+        document.getElementById("antenna"+i).disabled = true;
+        document.getElementById("immob"+i).disabled = true;
+		document.getElementById("receive_from"+i).disabled = true;
+		document.getElementById("connectors"+i).disabled = true;
+      }
+    }  
+  }    
+  function setRow(rowId){
+    var row = document.getElementById("check"+rowId)
+    if(row.checked){
+      document.getElementById("remark"+rowId).disabled = false;
+      document.getElementById("antenna"+rowId).disabled = false;
+      document.getElementById("immob"+rowId).disabled = false;
+	  document.getElementById("receive_from"+rowId).disabled = false;
+	  document.getElementById("connectors"+rowId).disabled = false;
+    }else{
+      document.getElementById("remark"+rowId).disabled = true;
+      document.getElementById("antenna"+rowId).disabled = true;
+      document.getElementById("immob"+rowId).disabled = true;
+	  document.getElementById("receive_from"+rowId).disabled = true;
+	  document.getElementById("connectors"+rowId).disabled = true;
+    }
+  }
+</script>
+<script data-config>
+    var filtersConfig = {
+        base_path: 'dist/tablefilter/',
+        paging: true,
+
+        remember_grid_values: false,
+        remember_page_number: false,
+        remember_page_length: false,
+        alternate_rows: false,
+        btn_reset: true,
+        rows_counter: true,
+        loader: false,
+
+        status_bar: true,
+
+        status_bar_css_class: 'myStatus',
+
+        extensions:[{
+            name: 'sort',
+          types: [
+                    'number', 'number','number','number','number','string','number','number','number','string','string','number'
+                ]
+        }]
+    };
+
+    var tf = new TableFilter('filtertable', filtersConfig);
+    tf.init();
+
+</script>
+</body>
+</html>

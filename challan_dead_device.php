@@ -1,0 +1,208 @@
+<?php
+ob_start();
+//ini_set("session.auto_start", 0);
+require_once('/fpdf/fpdf.php');
+ //echo date('H:i:sa'); die;
+ $data=array();
+ $datas=array();
+ $data=$_GET;
+ //echo count($_GET); die;
+//echo '<pre>';print_r($data);die;	  
+ if(isset($_GET['installer_name']))
+ {
+	$arr=array (
+				'sno'=>$data['sno'],
+				'devic_id' =>$data['devic_id'],
+				'itgc_id'=> $data['itgc_id'],
+				'imei_no' => $data['imei_no'],
+				'antenna'=> $data['antenna'],
+				'immob_type' => $data['immob_type'],
+				'immob_count'=> $data['immob_count'],
+				'connectors' => $data['connectors'],
+				'installer_name'=> $data['installer_name'],
+				'strChallanNo' => $data['strChallanNo'],
+				//'device_type' => $data['device_type'],
+				'login_name'=> $data['login_name'],
+				) ;
+				array_push($datas,$arr);
+				
+  
+				//echo '<pre>';print_r($datas);die;	  
+				$pdf=new FPDF();
+				$pdf->AddPage();
+				$pdf->SetFont('Arial','',10);
+				$pdf->Image('fpdf/header.png',10,6,200);
+				//  $pdf->cell(18,10,'',0);
+				  
+				  $pdf->ln(8);
+				  $pdf->cell(180,10,'Challan NO:'.$data['strChallanNo'].'',0,6,'R');
+				  $pdf->cell(180,10,'Date:'.date('d-m-Y').'',0,6,'R');
+				   $pdf->cell(180,10,'Time:'.date("H:i:s").'',0,6,'R');
+				   
+				  $pdf->ln(70);
+				  $pdf->SetFont('Arial','B',11);
+				  $pdf->cell(70,8,'',0);
+				  $pdf->cell(100,8,'DEAD Device Delivery Challan',0);
+				  		   
+				  $pdf->ln(15);
+				  $pdf->SetFont('Arial','',11);
+				  $pdf->cell(50,6,'Installer Name:',0);
+				 $pdf->cell(50,6,$data['installer_name'],0);
+				  $pdf->cell(50,6,'Delivered By:',0);
+				  $pdf->cell(50,6,$data['login_name'],0);
+			 
+					
+					// Column headings
+					$header = array('S.no', 'ITGC ID', 'IMEI', 'Device Type', 'Antenna', 'Immoblizer Type', 'Immoblizer', 'Connector'	);
+					$pdf->SetFont('Arial','',8);
+					//print_r($header); die;
+
+	
+					// Colors, line width and bold font
+					$pdf->SetFillColor(255,0,255);
+					//$pdf->SetTextColor(255);
+					//$pdf->SetDrawColor(128,0,0);
+					$pdf->SetLineWidth(.2);
+					$pdf->SetFont('','');
+					$pdf->Ln(15);
+					// Header
+					$w = array(10,30,40,30,20,25,20,20);
+							//print_r($w); die;
+				
+				for($i=0;$i<count($header);$i++)
+				$pdf->Cell($w[$i],7,$header[$i],1,0,'C',true);
+				$pdf->Ln();
+				// Color and font restoration
+				//$pdf->SetFillColor(224,235,255);
+				//$pdf->SetTextColor(91,137,42);
+				$pdf->SetFont('');
+				// Data
+				$fill = false;
+		
+			foreach($datas as $row)
+			{
+				//print_r($data); 
+				$pdf->Cell($w[0],6,$row['sno'],'LR',0,'C',$fill);
+				$pdf->Cell($w[1],6,$row['itgc_id'],'LR',0,'C',$fill);
+				$pdf->Cell($w[2],6,$row['imei_no'],'LR',0,'C',$fill);
+				//$pdf->Cell($w[3],6,$row['device_type'],'LR',0,'C',$fill);
+				$pdf->Cell($w[4],6,$row['antenna'],'LR',0,'C',$fill);
+				$pdf->Cell($w[5],6,$row['immob_type'],'LR',0,'C',$fill);
+				$pdf->Cell($w[6],6,$row['immob_count'],'LR',0,'C',$fill);
+				$pdf->Cell($w[7],6,$row['connectors'],'LR',0,'C',$fill);
+				$pdf->Ln();
+				$fill = !$fill;
+			}
+		// Closing line
+	    $pdf->Cell(array_sum($w),0,'','T');
+ }
+if(isset($_GET['dispatch_branch']))
+ {
+	$arr=array (
+				'sno'=>$data['sno'],
+				'devic_id' =>$data['devic_id'],
+				'itgc_id'=> $data['itgc_id'],
+				'imei_no' => $data['imei_no'],
+				'antenna'=> $data['antenna'],
+				'immob_type' => $data['immob_type'],
+				'immob_count'=> $data['immob_count'],
+				'connectors' => $data['connectors'],
+				'dispatch_branch'=> $data['dispatch_branch'],
+				'strChallanNo' => $data['strChallanNo'],
+				//'device_type' => $data['device_type'],
+				'login_name'=> $data['login_name'],
+				) ;
+				array_push($datas,$arr);
+				
+  
+				//echo '<pre>';print_r($datas);die;	  
+				$pdf=new FPDF();
+				$pdf->AddPage();
+				$pdf->SetFont('Arial','',10);
+				$pdf->Image('fpdf/header.png',10,6,200);
+				//  $pdf->cell(18,10,'',0);
+				  
+				  $pdf->ln(8);
+				  $pdf->cell(180,10,'Challan NO:'.$data['strChallanNo'].'',0,6,'R');
+				  $pdf->cell(180,10,'Date:'.date('d-m-Y').'',0,6,'R');
+				   $pdf->cell(180,10,'Time:'.date("H:i:s").'',0,6,'R');
+				   
+				  $pdf->ln(70);
+				  $pdf->SetFont('Arial','B',11);
+				  $pdf->cell(70,8,'',0);
+				  $pdf->cell(100,8,'DEAD Device Delivery Challan',0);
+				  		   
+				  $pdf->ln(15);
+				  $pdf->SetFont('Arial','',11);
+				  $pdf->cell(50,6,'dispatch Branch:',0);
+				 $pdf->cell(50,6,$data['dispatch_branch'],0);
+				  $pdf->cell(50,6,'Delivered By:',0);
+				  $pdf->cell(50,6,$data['login_name'],0);
+			 
+					
+					// Column headings
+					$header = array('S.no', 'ITGC ID', 'IMEI', 'Device Type', 'Antenna', 'Immoblizer Type', 'Immoblizer', 'Connector'	);
+					$pdf->SetFont('Arial','',8);
+					//print_r($header); die;
+
+	
+					// Colors, line width and bold font
+					$pdf->SetFillColor(255,0,255);
+					//$pdf->SetTextColor(255);
+					//$pdf->SetDrawColor(128,0,0);
+					$pdf->SetLineWidth(.2);
+					$pdf->SetFont('','');
+					$pdf->Ln(15);
+					// Header
+					$w = array(10,30,40,30,20,25,20,20);
+							//print_r($w); die;
+				
+				for($i=0;$i<count($header);$i++)
+				$pdf->Cell($w[$i],7,$header[$i],1,0,'C',true);
+				$pdf->Ln();
+				// Color and font restoration
+				//$pdf->SetFillColor(224,235,255);
+				//$pdf->SetTextColor(91,137,42);
+				$pdf->SetFont('');
+				// Data
+				$fill = false;
+		
+			foreach($datas as $row)
+			{
+				//print_r($data); 
+				$pdf->Cell($w[0],6,$row['sno'],'LR',0,'C',$fill);
+				$pdf->Cell($w[1],6,$row['itgc_id'],'LR',0,'C',$fill);
+				$pdf->Cell($w[2],6,$row['imei_no'],'LR',0,'C',$fill);
+				//$pdf->Cell($w[3],6,$row['device_type'],'LR',0,'C',$fill);
+				$pdf->Cell($w[4],6,$row['antenna'],'LR',0,'C',$fill);
+				$pdf->Cell($w[5],6,$row['immob_type'],'LR',0,'C',$fill);
+				$pdf->Cell($w[6],6,$row['immob_count'],'LR',0,'C',$fill);
+				$pdf->Cell($w[7],6,$row['connectors'],'LR',0,'C',$fill);
+				$pdf->Ln();
+				$fill = !$fill;
+			}
+		// Closing line
+	    $pdf->Cell(array_sum($w),0,'','T');
+ } 
+		//footer
+
+			/* 	 $pdf->AddPage();
+				  $pdf->SetFont('Arial','',10);
+				 // $pdf->Image('logo.png',10,6,30);
+					//$pdf->Image('fpdf/logo.png',10,6,30);
+					$pdf->Image('fpdf/footer.png',10,6,200);
+	 $pdf->SetY(-60);
+    // Arial italic 8
+    $pdf->SetFont('Arial','I',8);
+    // Page number
+    $pdf->Cell(0,10,'Page '.$pdf->PageNo(),0,0,'C'); */
+	  $pdf->SetY(-50);
+	  $pdf->Image('fpdf/footer.png',10,240,200);
+    // Arial italic 8
+    $pdf->SetFont('Arial','I',8);
+    // Page number
+   // $pdf->Cell(0,10,'Page '.$pdf->PageNo(),0,0,'C');
+	
+	
+	$pdf->Output();
+?>

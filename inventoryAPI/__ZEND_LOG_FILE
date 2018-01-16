@@ -1,0 +1,616 @@
+2017-09-25T15:53:45+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-25T16:17:46+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-25T17:58:47+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-25T18:18:02+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-25T18:19:44+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-25T18:22:19+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-25T18:23:28+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-25T18:25:33+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-25T18:29:13+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-25T18:54:44+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-25T19:09:06+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T11:12:24+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T11:47:14+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T15:04:33+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T15:44:39+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T15:45:55+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T16:30:30+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T16:41:55+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T16:59:24+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:00:46+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:02:32+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:11:37+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:13:19+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:17:31+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:20:40+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:25:46+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:26:07+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:29:55+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:35:24+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:52:51+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T17:57:44+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T18:03:55+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T18:04:07+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T18:10:19+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T19:28:28+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T19:29:33+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-26T19:33:44+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-27T10:49:31+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-27T17:10:12+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-27T17:27:19+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-27T17:32:52+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-27T17:39:47+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-09-27T17:41:52+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}
+2017-10-03T13:17:32+05:30 INFO (6): exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:290
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php(290): PDOStatement->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#2 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#3 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#4 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[HY000]: General error' in /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Statement/Pdo.php:294
+Stack trace:
+#0 /opt/lampp/htdocs/inventory/private/lib/Zend/Db/Adapter/Abstract.php(707): Zend_Db_Statement_Pdo->fetchAll(2)
+#1 /opt/lampp/htdocs/inventory/private/lib/library_common.php(165): Zend_Db_Adapter_Abstract->fetchAll('update internal...', Array)
+#2 /opt/lampp/htdocs/inventory/inventoryAPI/login.php(57): db__select('update internal...')
+#3 {main}

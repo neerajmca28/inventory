@@ -1,0 +1,140 @@
+<?php 
+include("config.php");
+include("include/header.php");
+include_once(__DOCUMENT_ROOT.'/private/master.php'); 
+$masterObj = new master();
+if(isset($_POST['Submit']))
+{
+	function array_msort($array, $cols)
+	{
+		$colarr = array();
+		foreach ($cols as $col => $order) {
+	  $colarr[$col] = array();
+	  foreach ($array as $k => $row) { $colarr[$col]['_'.$k] = strtolower($row[$col]); }
+	 }
+
+	 $eval = 'array_multisort(';
+	 
+	 foreach ($cols as $col => $order) {
+	  $eval .= '$colarr[\''.$col.'\'],'.$order.',';
+	 }
+
+	 $eval = substr($eval,0,-1).');';
+	 eval($eval);
+	 $ret = array();
+	 foreach ($colarr as $col => $arr) 
+	 {
+		  foreach ($arr as $k => $v) 
+		  {
+		   $k = substr($k,1);
+		   if (!isset($ret[$k])) $ret[$k] = $array[$k];
+		   $ret[$k][$col] = $array[$k][$col];
+		  }
+	}
+	return $ret;
+
+	} 
+		echo $imei_no=$_POST['txtimei_no']; 
+		$dataservices=$masterObj->newQryService($imei_no); 
+		//echo '<pre>'; print_r($dataservices[0]['veh_reg']);'</pre>'; 
+		//echo count($dataservices); die;
+	
+	if(count($dataservices)>0)
+	{
+		 $Serviceid=$dataservices[0]["id"];
+		 $Veh_reg=$dataservices[0]["veh_reg"];
+		//  $queryAppend="where sys_Service_id =".$Serviceid; 
+		if($imei_no!="" || $Serviceid!="")
+		{
+			$navData=$masterObj->navData($Serviceid); 
+		}
+			$data1=array();
+			for($countNavData=0;$countNavData<count($navData);$countNavData++)
+			{
+				if(is_array($navData[$countNavData]))
+				{
+					$data1=array_merge($data1,$navData[$countNavData]);
+				}
+			}
+				$data2 = array_msort($data1, array('gps_time'=>SORT_DESC));
+				foreach($data2 as $val)
+				{
+					$data[] = $val;
+				}
+	}
+}
+
+?>
+
+<head>
+</head>
+<body>
+ <form name="raw_log" id="raw_log" method="post" action="livedata_check.php" >
+<div class="col-12">	
+    <!-- BEGIN BORDERED TABLE PORTLET-->
+    <div class="portlet box yellow">
+	<div class="portlet-title">
+				<div class="caption"> <i class="fa fa"></i>Raw Log Data </div>
+				</div>
+	<div class="portlet-body control-box">
+				<div class="content-box">
+					<div class="left-item"><span><strong>IMEI:</strong></span> </div>
+					<div class="right-item"><input type="text"  class="form-control" name="txtimei_no" id="txtimei_no" value="<?php echo $imei_no; ?>" ></div>
+					</div>
+		
+					
+			<div class="content-box">
+           <div class="left-item">  </div>
+          <div class="right-item"><input type="button" class="btn btn-primary btnaddsim"  name="Submit" value="Submit" id="submit"> <input  class="btn btn-default" type="button" name="Submit" id="cancel" value="Cancel" onclick='cancelAll();'></div>
+		     </div>
+	</div>
+		   <div class="content-box">
+		   
+		   <div class="portlet-body fix-table" id="tt"  style="display:none">
+       
+			</div>
+           
+          </div>
+		  
+		  
+		</div>
+	
+</div>
+ 
+	   
+     
+          </form> 
+
+</body>
+  <script>
+   var $fil = jQuery.noConflict();
+       $fil(document).ready(function() {
+        $fil(".btnaddsim").click(function(){
+			var txtimei_no = document.getElementById("txtimei_no").value;
+				$fil.ajax({
+				type:"POST",
+				url:"process_livedata_check.php",
+				dataType: "html",
+				data:'imei_no='+ txtimei_no,
+				success:function(msg)
+				{
+					//alert(msg);
+					 $fil("#tt").html(msg);
+					 document.getElementById('tt').style.display = "block";
+					 document.getElementById("tt").innerHTML = msg; 
+				},
+				error:function(msg){
+            
+				}
+		}); 	
+		});
+		
+		$fil("#cancel").click(function(){
+			document.getElementById('txtimei_no').value = "";
+			document.getElementById('data_string').style.display = "none";
+			//document.getElementById('data_string').style.display = "none";
+		});
+	   });
+	   
+		</script>
+</html>	

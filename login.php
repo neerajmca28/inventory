@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Inventory Login</title>
+<link href="file/g.png" rel="shortcut icon" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="file/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="file/in.css">
+</head>
+
+<body class="login-body">
+<div class="login-box">
+
+       <div class="login-logo"><img src="file/login-logo.png"></div>
+		
+      <div class="controls">
+      <h2>Gtrac Inventory Login Form</h2>
+     
+      	<input type="text" placeholder="User Name" class="form-control" />
+      
+       
+        <input type="text" placeholder="Password" class="form-control" />
+        
+        <a class="btn-login" href="index.html">Login </a>
+        <a class="btn-cancel">Cancel </a>
+       <a style="text-align: center;width: 100%;display: block;margin-top: 46px;">Login and Use Inventory</a>
+      </div>
+</div>
+</body>
+</html>

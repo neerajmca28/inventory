@@ -1,0 +1,366 @@
+<?php
+include("device_status.php");
+include("config.php");
+include("include/header.php");
+include_once(__DOCUMENT_ROOT.'/private/master.php'); 
+if(!isset($_SESSION['branch_id']))
+{
+ ?><script><?php echo("location.href = '".__SITE_URL."/index.php';");?></script><?php
+}
+$masterObj = new master();
+ $branch_id=$_SESSION['branch_id'];
+$SelectSimNoDisplay=select_Procedure("CALL SelectSimNoDisplay()");
+$SelectSimNoDisplay=$SelectSimNoDisplay[0];
+$rowcount=count($SelectSimNoDisplay);
+//echo '<pre>';print_r($SelectSimNoDisplay); echo '</pre>'; die;
+$branchList=select_Procedure("CALL GetBranch()");
+//print_r($brandList); die;
+$branchList=$branchList[0];
+$errorMsg="";
+
+if (isset($_POST['submit']))
+{
+
+	if((!isset($_POST['ddlBranchName'])) || (empty($_POST['ddlBranchName'])) || (($_POST['ddlBranchName']==0)))
+	{
+		//	$errorMsg="Please Select Branch";
+		$BranchMsg="Please Select Branch";
+	}
+	if((!isset($_POST['ddlMedium'])) || (empty($_POST['ddlMedium'])) || (($_POST['ddlMedium']==0)))
+	{
+		//$errorMsg= "Please Select Dispatch Medium";
+		$MediumMsg= "Please Select Dispatch Medium";
+	}
+	//if($errorMsg=='')
+	if($BranchMsg=='' && $MediumMsg=='')
+	{
+		for($i=0;$i<count($_POST['rowVal']);$i++)
+		{
+			if(isset($_POST['rowVal'][$i]))
+			{
+					$ChallanMode=$Sim;
+					//$strChallanMode = "SimDispatchChallanNo";
+					if ($ChallanMode == 1)
+					{
+						$strChallanMode = "DispatchChallanNo";
+					}
+					else if ($ChallanMode == 3)
+					{
+						$strChallanMode = "SimDispatchChallanNo";
+					}
+					else
+					{
+						$strChallanMode = "InstallerChallanNo";
+					}
+					//echo $strChallanMode;
+					$strCH = "CHNO";
+					$strSqlQuery =$masterObj->selectChallanNo($strChallanMode);
+					//	echo '<pre>';print_r($strSqlQuery); '</pre>';
+					//echo count($strSqlQuery);
+					if (count($strSqlQuery)> 0)
+					{
+						 $strResult = ($strSqlQuery[0]['Id'] + 1);
+					}
+					//echo $strResult; die;
+					 $strChallanNo=$strCH.$strResult;
+					 $data=explode('##',$_POST['rowVal'][$i]);
+					 $sim_no=$data[0];
+					 $phone_no=$data[1];
+					 $operator=$data[2];
+					 $sim_id=$data[3];
+					if($operator=='Airtel')
+					{
+					  $operator_id=1;
+					}
+					if($operator=='Vodafone')
+					{
+					  $operator_id=2;
+					}
+					if($operator=='Aircel')
+					{
+					  $operator_id=3;
+					}
+					if($operator=='Reliance')
+					{
+					  $operator_id=4;
+					}
+					if($operator=='Idea')
+					{
+					  $operator_id=5;
+					}
+					if($operator=='SD-32 GB')
+					{
+					  $operator_id=6;
+					}
+				
+					 
+					//$sim_id=$_POST['sim_id'][$i];
+					//$phone_no=$_POST['phone_no'][$i];
+					//$operator_id=$_POST['operator_id'][$i]; 
+					//$rec_date=$_POST['rec_date'][$i];
+					$dispatch_date=date('Y-m-d H:i:s');
+					 $remark=$_POST['remark'][$i];
+					 $branch_send=$_POST['ddlBranchName'];
+					 $dispatch_medium_id=$_POST['ddlMedium'];
+					 if($dispatch_medium_id==1)
+					 {
+						  $dispatch_medium="Courier";
+					 }
+					 if($dispatch_medium_id==2)
+					 {
+						  $dispatch_medium="Person";
+					 }
+					 $dis_medium_remark=$_POST['txtDispactchRemarks'];
+					 $sim_status=$Sim_Recd;
+					$sim_dispatched=select_Procedure("CALL SimDispatched('".$sim_id."','".$dispatch_date."','".$dispatch_medium."','".$dis_medium_remark."','".$remark."','".$branch_send."','".$operator_id."','".$sim_status."')");
+					//print_r($sim_dispatched);
+					//<script>window.location.reload(true);</script>
+					$SelectSimChallanDetail=$masterObj->SelectSimChallanDetail($sim_id);
+						//echo '<pre>';print_r($SelectSimChallanDetail);die;
+						//echo count($SelectSimChallanDetail);die;
+						//echo count($SelectSimChallanDetail);die;
+						if(count($SelectSimChallanDetail)<1)
+						{
+							$insertSimChallanDetail=$masterObj->insertSimChallanDetail($strChallanNo,$sim_id,$branch_send);
+						}
+						else
+						{
+							//echo 'tt';
+							//die;
+							if(count($SelectSimChallanDetail)>0)
+							{
+								if($SelectSimChallanDetail[0]["DispatchChallanNo"] != "")
+								{
+									//echo 'tt'; die;
+									$updateSimChallanDetails=$masterObj->updateSimChallanDetails($sim_id); 
+									$insertSimChallanDetail=$masterObj->insertSimChallanDetail($strChallanNo,$sim_id,$branch_send);
+								
+								}
+								else
+								{
+									$updateSimChallanDetailExist=$masterObj->updateSimChallanDetailExist($strChallanNo,$branch_send,$sim_id); 
+								}
+							}
+							
+						}
+						
+						
+						//header( "Location:challan_sim.php?challanNo=".$strChallanNo ); 						
+			
+			}	
+					
+		}
+			$updateApplicationSetting=$masterObj->updateApplicationSetting($strChallanMode,$strResult); 
+			echo "<script type='text/javascript'>   
+   		 	window.open('challan_sim.php?challanNo=$strChallanNo');
+     		</script>";
+     		 ?><script><?php echo("location.href = '".__SITE_URL."/dispatchsim.php';");?></script><?php
+	
+	}
+}
+
+?>
+<head>
+<style>
+.error {color: #FF0000;}
+</style>
+</head>
+<body>
+ <form name="dispatch_sim" id="dispatch_sim" method="post" action="" onSubmit="return dispatchSim();" >
+<article> 
+  <div class="col-12"> 
+
+		<div class="portlet box yellow">
+				<div class="portlet-title">
+				<div class="caption"> <i class="fa fa"></i>Dispatch Sim </div>
+				</div>
+					<div class="portlet-body control-box">
+					 <div class="content-box">
+						 <div class="left-item"> <span>Branch Name:</span> </div>
+						<div class="right-item"><select class="form-control"  name="ddlBranchName" id="ddlBranchName" onChange="">
+						<option value="0">Select</option>
+						<?php for($i=0;$i<count($branchList);$i++)
+						{?>
+							<option value="<?php echo $branchList[$i]['id']?>"><?php echo $branchList[$i]['branch_name'];?></option>
+						<?php } ?>
+						</select>
+						</div> <span class="error">* <?php echo $BranchMsg;?></span>
+					</div>	
+					 <div class="content-box">
+						 <div class="left-item"> <span>Dispatch Medium:</span> </div>
+						<div class="right-item"><select class="form-control" name="ddlMedium" id="ddlMedium" onChange="ddlMedium_SelectedIndexChanged(this.value);">
+					<option value="0">Please Select</option>
+					<option value="1">Courier</option>
+					<option value="2">Person</option>
+					</select></div>
+					<span class="error">* <?php echo $MediumMsg;?></span></div>
+					
+					 <div class="content-box">
+						 <div class="left-item"> <span>Dispatch Medium Remarks</span> </div>
+						<div class="right-item"><input type="text" class="form-control" name="txtDispactchRemarks" id="txtDispactchRemarks">
+						</div></div>
+						</div>
+						</div>
+						</div>
+						</article>
+                        
+                        <div class="col-12">
+<div class="portlet box yellow">
+				<div class="portlet-title">
+				<div class="caption"> <i class="fa fa"></i>Dispatch Sim </div>
+				</div>
+					<div class="portlet-body control-box">
+                        
+                        
+	   
+        <table class="table table-bordered table-hover" id="filtertable">
+         
+          <thead>
+            <tr>
+              <th><input type="checkbox" name="checkAll[]" id="checkAll" onClick="checkAllId();" class="checkAll"></th>
+              <th> Sim No</th>
+			  <th> Phone No </th>
+              <th> Operator</th>
+              <th> Received Date </th>
+              <th> Remarks </th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+
+			for($x=0;$x<$rowcount;$x++)
+			{
+				$y=$x+1;
+            ?>
+            <tr>
+              <td><input type="checkbox" id="check<?php echo $y; ?>" name="rowVal[]" value="<?php echo $SelectSimNoDisplay[$x]['sim_no'];?>##<?php echo $SelectSimNoDisplay[$x]['phone_no'];?>##<?php echo $SelectSimNoDisplay[$x]['operator'];?>##<?php echo $SelectSimNoDisplay[$x]['sim_id'];?>" onClick="setRow('<?php echo $y; ?>');" class="checkbox1"></td>
+			  <td><?php echo $SelectSimNoDisplay[$x]['sim_no']; ?></td>
+			  <td><?php echo $SelectSimNoDisplay[$x]['phone_no']; ?></td>
+			  <td><?php echo $SelectSimNoDisplay[$x]['operator']; ?></td>
+			  <?php
+				$operator_id= $SelectSimNoDisplay[$x]['operator'];
+				if($operator_id=='Airtel')
+				{
+				  $operator_id=1;
+				}
+				if($operator_id=='Vodafone')
+				{
+				  $operator_id=2;
+				}
+				if($operator_id=='Aircel')
+				{
+				  $operator_id=3;
+				}
+				if($operator_id=='Reliance')
+				{
+				  $operator_id=4;
+				}
+				
+				?>
+			  <td><?php echo date('d-m-Y H:i:s',strtotime($SelectSimNoDisplay[$x]['rec_date']));?></td>
+              <td>
+                <textarea rows="1" cols="30" id="remark<?php echo $y;?>" name="remark[]" disabled></textarea> 
+              </td>
+             
+            </tr>
+            <?php } ?>
+            
+          </tbody> 
+        </table>
+		 <td colspan="11"><input type="submit" onClick="bulk()" name="submit" class="btn btn-default table-btn-submit" id="submit" value="Dispatch"></td>
+      </div>
+    </div>
+    <!-- END BORDERED TABLE PORTLET--> 
+</form>
+<script>
+function dispatchSim() 
+{
+	var e = document.getElementById("ddlBranchName");
+	var branch_name= e.options[e.selectedIndex].value;
+	var m = document.getElementById("ddlMedium");
+	var medium= m.options[m.selectedIndex].value;
+	//var e = document.getElementById("installer_list_to");
+	//var inst_name_to= e.options[e.selectedIndex].value;
+	//var strUser1 = e.options[e.selectedIndex].text;
+	//alert(inst_name_to);
+	if(branch_name==0 )
+	{
+		alert("Please Select Branch Name");
+		document.dispatch_sim.ddlBranchName.focus();
+		return false;
+	} 
+	if(medium==0 )
+	{
+		alert("Please Select Dispatch Medium");
+		document.dispatch_sim.ddlMedium.focus();
+		return false;
+	} 
+}
+</script>
+<script>
+ var $dispatch = jQuery.noConflict()
+  $dispatch('.checkbox1').on('change', function() {
+    var bool = $dispatch('.checkbox1:checked').length === $dispatch('.checkbox1').length;
+    $dispatch('#checkAll').prop('checked', bool);
+  });
+
+  $dispatch('#checkAll').on('change', function() {
+    $dispatch('.checkbox1').prop('checked', this.checked);
+  });
+</script>
+<script type="text/javascript">
+  function checkAllId(){
+    var i;
+    var row = document.getElementById("checkAll")
+    for(i=1;i<=<?php echo $rowcount; ?>;i++){
+      if(row.checked){
+        document.getElementById("remark"+i).disabled = false;
+        }
+      else
+      {
+        document.getElementById("remark"+i).disabled = true;
+      }
+    }  
+  }    
+  function setRow(rowId){
+    var row = document.getElementById("check"+rowId)
+	//alert("check"+rowId);
+    if(row.checked){
+      document.getElementById("remark"+rowId).disabled = false;
+
+    }else{
+      document.getElementById("remark"+rowId).disabled = true;
+    }
+  }
+</script>
+<script data-config>
+    var filtersConfig = {
+        base_path: 'dist/tablefilter/',
+        paging: true,
+
+        remember_grid_values: false,
+        remember_page_number: false,
+        remember_page_length: false,
+        alternate_rows: false,
+        btn_reset: true,
+        rows_counter: true,
+        loader: false,
+
+        status_bar: true,
+
+        status_bar_css_class: 'myStatus',
+
+        extensions:[{
+            name: 'sort',
+          types: [
+                    'number','number','number','string','number'
+                ]
+        }]
+    };
+
+    var tf = new TableFilter('filtertable', filtersConfig);
+    tf.init();
+
+</script>
+</body>
+</html>
