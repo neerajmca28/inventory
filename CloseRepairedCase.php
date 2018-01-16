@@ -29,8 +29,15 @@ if (isset($_SESSION['branch_id']) &&  !empty($_SESSION['branch_id'])) {
 
       if ($rowCloseCase['device_imei'] < 0) { echo "You can't close this case as device is not giving data"; }
       
-      if (isset($_POST['changeimei']) == 1) { $flag=1; $mode=4; $imei=$_POST['newchangeimei']; }
-        else { $mode=1; $imei=$rowCloseCase['device_imei']; }
+      if (isset($_POST['changeimei']) == 1) { 
+        $flag=1; 
+        $mode=4; 
+        $imei=$_POST['newchangeimei']; 
+      }
+      else { 
+        $mode=1; 
+        $imei=$rowCloseCase['device_imei']; 
+      }
         
       if ($_POST['scost'] == 0) { $sparecost = 0; } else { $sparecost = $_POST['scost']; }
       
@@ -39,30 +46,23 @@ if (isset($_SESSION['branch_id']) &&  !empty($_SESSION['branch_id'])) {
       $devicestatus = $CloseCaseForRepairedDevice; // Device Status    
       $deviceproblem = $_POST['problems']; // Device Problems
       $newDeviceProblem = explode("##", $deviceproblem); // Split Value
-      //print_r($newDeviceProblem);die();
-      //echo $newDeviceProblem[0];
+      
       
 
       if($newDeviceProblem[0] == 11 || $newDeviceProblem[0] == 12 || $newDeviceProblem[0] == 13 || $newDeviceProblem[0] == 14 || $newDeviceProblem[0] == 32)
       {
-          //$devicestatus = $FinalAttachSim; 
-		  $devicestatus = $recd_manufacture_devByStock;
+          
+          $devicestatus = $recd_manufacture_devByStock;
           $newphoneno = $_POST['phno']; // SIM Id
           $phone_no = explode('##',$newphoneno); // Phone No 
           $deviceimei = $rowCloseCase['device_imei'];
-		 // echo "CALL AttachPhoneNoAndDeactivate('".$deviceid."','".$phone_no[0]."','".$devicestatus."')";die();
-          //$simattached=select_Procedure("CALL AttachPhoneNoAndDeactivate('".$deviceid."','".$newphoneno."','".$devicestatus."')");
-
-		  $simattached=select_Procedure("CALL AttachPhoneNoAndDeactivate('".$deviceid."','".$phone_no[0]."','".$devicestatus."')");
-          //$id = $installer_view[$i]['InstallerID'];
-          //echo "select installer.inst_name from internalsoftware.installer where inst_id='".$id."'";die();
-          //
-          //echo "update mobile_simcards set mobile_no='".$phone_no[1]."' where id in (select sys_simcard from devices where devices.imei='".$deviceimei."')";
+     
+          $simattached=select_Procedure("CALL AttachPhoneNoAndDeactivate('".$deviceid."','".$phone_no[0]."','".$devicestatus."')");
+          
           $strSqlQuery =db__select_matrix("update mobile_simcards set mobile_no='".$phone_no[0]."' where id in (select sys_simcard from devices where devices.imei='".$deviceimei."')");
           header("Location:repairdevice.php");
       }
       else{
-        //echo "CALL SaveRepairCloseCase('".$deviceid."','".$mode."','".$imei."','".$devicestatus."','".$deviceproblem."','".$closecasedate."','".$sparecost."')";die();
         $repairclosecase=select_Procedure("CALL SaveRepairCloseCase('".$deviceid."','".$mode."','".$imei."','".$devicestatus."','".$newDeviceProblem[1]."','".$closecasedate."','".$sparecost."')");
         if($repairclosecase){
           header("Location:repairdevice.php");
@@ -74,22 +74,7 @@ if (isset($_SESSION['branch_id']) &&  !empty($_SESSION['branch_id'])) {
 
     // Dead Case
 
-   /* if (isset($_POST['submit1'])) {
-
-      $mode=2; // Mode
-      $deviceid = $_GET['deviceid']; // Device ID
-      $devicestatus = $DeadDevice; // Device Status
-      $deviceproblem = $problem; // Device Problems
-      $closecasedate = date("Y-m-d H:i:s"); // Close Case Date
-      $imei = $deviceImei;
-      $sparecost = 0;
-      $repairclosecase=select_Procedure("CALL SaveRepairCloseCase('".$deviceid."','".$mode."','".$imei."','".$devicestatus."','".$deviceproblem."','".$closecasedate."',".$sparecost.")");
-      
-      if($repairclosecase){
-        header("Location:repairdevice.php");
-      }  
-    }*/
-	if (isset($_POST['submit1'])) {
+  if (isset($_POST['submit1'])) {
 
       $mode=2; // Mode
       $deviceid = $_GET['deviceid']; // Device ID
@@ -325,7 +310,7 @@ if (isset($_SESSION['branch_id']) &&  !empty($_SESSION['branch_id'])) {
                       <option value="Immobilizer Problem">Immobilizer Problem</option>
                       <option value="TCP not dialing">TCP not dialing</option>
                       <option value="Wrong authentication code">Wrong authentication code</option>
-					  <option value="Wrong authentication code">Modem communication error</option>
+            <option value="Wrong authentication code">Modem communication error</option>
                      </select>
                     </div>
                   </td>
@@ -505,9 +490,9 @@ if (isset($_SESSION['branch_id']) &&  !empty($_SESSION['branch_id'])) {
 
       $closeReapairCase('#problemsid').change(function(){
           var id = $closeReapairCase('#problemsid :selected').val();
-		  if(id == 0){
-			alert("Please Select Problemsss")
-		  }
+      if(id == 0){
+      alert("Please Select Problemsss")
+      }
           var res = id.split("##");
           //alert(res[0])
           if(res[0] == '11' || res[0] == '12'|| res[0] == '13' || res[0] == '14' || res[0] =='32'){
@@ -597,7 +582,7 @@ if (isset($_SESSION['branch_id']) &&  !empty($_SESSION['branch_id'])) {
       $closeReapairCase('#manufactureid').click(function() {
         $closeReapairCase("#submitid").attr('name','submit2');
       });
-	});
+  });
   </script>
 </body>
 </html>
